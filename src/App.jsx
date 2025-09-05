@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import logo from "/src/assets/mindado-logo.png";
+import viteLogo from '/vite.svg' // este funciona si vite.svg está en public/
+import logo from './assets/mindado-logo.png'
 
 import './App.css'
-
 
 function App() {
   const [roll, setRoll] = useState(1);
@@ -23,7 +22,7 @@ function App() {
 
   return (
     <div className="app">
-       <img src={logo} alt="Logo del juego" className="logo" />
+      <img src={logo} alt="Logo del juego" className="logo" />
 
       <div className={`dice face-${roll}`}>
         {Array.from({ length: 6 }).map((_, i) => (
