@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  text-align: center;
+}
+
+.btn {
+  background: #ffb703;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.score {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* 🎲 Estilos del dado */
+.dice {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 15px;
+  margin: 20px auto;
+  position: relative;
+  display: grid;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Posiciones de los puntos */
+.d1 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.d2 { top: 20%; left: 20%; }
+.d3 { top: 20%; right: 20%; }
+.d4 { bottom: 20%; left: 20%; }
+.d5 { bottom: 20%; right: 20%; }
+.d6 { top: 50%; left: 20%; transform: translateY(-50%); }
+
+/* Caras del dado */
+.face-1 .d1 { display: block; }
+.face-2 .d2, .face-2 .d5 { display: block; }
+.face-3 .d1, .face-3 .d2, .face-3 .d5 { display: block; }
+.face-4 .d2, .face-4 .d3, .face-4 .d4, .face-4 .d5 { display: block; }
+.face-5 .d1, .face-5 .d2, .face-5 .d3, .face-5 .d4, .face-5 .d5 { display: block; }
+.face-6 .d2, .face-6 .d3, .face-6 .d4, .face-6 .d5, .face-6 .d6 { display: block; }
+
+/* Ocultar todos por defecto */
+.dot { display: none; }
+
+.logo {
+  width: 200px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+@media (max-width: 600px) {
+  .dice {
+    width: 100px;
+    height: 100px;
+  }
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+  .btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  .score {
+    font-size: 16px;
+  }
+  .logo {
+    width: 90px;
+  }
+}
+
